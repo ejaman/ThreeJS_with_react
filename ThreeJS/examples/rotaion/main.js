@@ -1,5 +1,5 @@
 import * as THREE from "../../build/three.module.js";
-import { GLTFLoader } from "../../build/GLTFLoader.js";
+import { GLTFLoader } from "../../ThreeJS/build/GLTFLoader.js.js";
 import { OrbitControls } from "../../build/OrbitControls.js";
 
 const canvas = document.querySelector("#c");
@@ -26,6 +26,7 @@ const DirectionalLight = new THREE.DirectionalLight(0xffffff, 1);
 scene.add(DirectionalLight);
 const AmbientLight = new THREE.AmbientLight(0xffffff, 1);
 scene.add(AmbientLight);
+
 const loader = new GLTFLoader();
 
 loader.load("viking_room/scene.gltf", function (gltf) {
